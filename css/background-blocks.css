@@ -1,0 +1,68 @@
+/* Background animation blocks */
+.animated-background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -3;
+  overflow: hidden;
+}
+
+.block {
+  position: absolute;
+  background: rgba(37, 99, 235, 0.05);
+  border: 1px solid rgba(37, 99, 235, 0.1);
+  border-radius: 3px;
+  box-shadow: 0 0 15px rgba(37, 99, 235, 0.1);
+  backdrop-filter: blur(2px);
+  animation: blockFloat linear infinite;
+  opacity: 0;
+}
+
+@keyframes blockFloat {
+  0% {
+    opacity: 0;
+    transform: translateY(100%) translateX(0) rotate(0deg);
+  }
+  10% {
+    opacity: 0.2;
+  }
+  50% {
+    transform: translateY(40%) translateX(var(--move-x, 30px)) rotate(var(--rotate-end, 45deg));
+    opacity: 0.15;
+  }
+  90% {
+    opacity: 0.15;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20%) translateX(calc(var(--move-x, 30px) * 2)) rotate(calc(var(--rotate-end, 45deg) * 2));
+  }
+}
+
+/* More animated elements styles */
+.block:nth-child(odd) {
+  border-radius: 0.5rem;
+}
+
+.block:nth-child(even) {
+  border-radius: 1rem 0.25rem;
+}
+
+.block:nth-child(3n) {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(15, 78, 138, 0.02));
+  border-width: 2px;
+}
+
+.block:nth-child(4n) {
+  width: 30px !important;
+  height: 120px !important;
+  border-radius: 1rem;
+}
+
+.block:nth-child(5n) {
+  width: 120px !important;
+  height: 30px !important;
+  border-radius: 1rem;
+}
