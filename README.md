@@ -1,8 +1,8 @@
-# 2x8 LEGO Kombinációk Kalkulátor
+# 2x4 LEGO Kombinációk Kalkulátor
 
 ## A Projektről
 
-Ez a webalkalmazás segít kiszámolni, hogy n darab 2x8-as LEGO elemet hányféle lehetséges módon lehet egymásra helyezni. A kalkulátor a matematikai formula alapján kiszámolja és megjeleníti az eredményeket egy áttekinthető táblázatban.
+Ez a webalkalmazás segít kiszámolni, hogy n darab 2x4-as LEGO elemet hányféle lehetséges módon lehet egymásra helyezni. A kalkulátor a matematikai formula alapján kiszámolja és megjeleníti az eredményeket egy áttekinthető táblázatban.
 
 ## Jellemzők
 
