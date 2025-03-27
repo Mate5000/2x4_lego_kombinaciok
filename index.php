@@ -26,7 +26,16 @@ function tablazatGeneralas($maxN) {
     return $tablazat;
 }
 
+// Server-side validation for maximum 200 elements
 $epitoelemekSzama = isset($_POST['epitoelemekSzama']) ? intval($_POST['epitoelemekSzama']) : 0;
+$hibaUzenet = '';
+
+// Validate input - maximum 200 elements
+if ($epitoelemekSzama > 200) {
+    $hibaUzenet = 'A maximális elemszám 200 lehet.';
+    $epitoelemekSzama = 200; // Limit to 200
+}
+
 $tablazat = [];
 
 if ($epitoelemekSzama > 0) {
@@ -67,19 +76,25 @@ if ($epitoelemekSzama > 0) {
                                 id="epitoelemekSzama" 
                                 name="epitoelemekSzama" 
                                 min="1" 
-                                max="20" 
+                                max="200" 
                                 value="<?php echo $epitoelemekSzama; ?>" 
                                 class="form-input"
                                 required
                             >
                             <button type="submit" class="submit-btn">Számítás</button>
                         </div>
+                        <?php if (!empty($hibaUzenet)): ?>
+                        <div class="error-message">
+                            <?php echo $hibaUzenet; ?>
+                        </div>
+                        <?php endif; ?>
                     </div>
                 </form>
                 
                 <?php if (!empty($tablazat)): ?>
                 <div class="results-container">
                     <h2 class="results-title">Eredmények</h2>
+                    <div class="mobile-scroll-hint">← Húzza oldalra a táblázatot →</div>
                     <div class="table-container">
                         <table class="results-table">
                             <thead>
