@@ -203,6 +203,17 @@ body::after {
   animation: fadeIn 0.5s 0.7s forwards;
 }
 
+.error-message {
+  margin-top: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  color: #ff4a6b;
+  font-size: 0.9rem;
+  background: rgba(255, 74, 107, 0.1);
+  border-radius: 0.5rem;
+  border-left: 3px solid #ff4a6b;
+  animation: fadeIn 0.3s forwards;
+}
+
 .form-label {
   display: block;
   margin-bottom: 0.75rem;
@@ -275,6 +286,41 @@ body::after {
   overflow: hidden;
   margin-bottom: 1.5rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile scroll hint */
+.mobile-scroll-hint {
+  display: none;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  background: rgba(37, 99, 235, 0.1);
+  border-radius: 0.5rem;
+  border: 1px dashed rgba(37, 99, 235, 0.3);
+  animation: pulse-hint 2s infinite;
+}
+
+@keyframes pulse-hint {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+
+/* Enable horizontal scrolling on mobile and tablet */
+@media screen and (max-width: 1024px) {
+  .table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .results-table {
+    min-width: 500px; /* Ensure table has minimum width to trigger scrolling */
+  }
+  
+  .mobile-scroll-hint {
+    display: block; /* Only show on mobile */
+  }
 }
 
 .results-table {
