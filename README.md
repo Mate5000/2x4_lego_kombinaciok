@@ -15,7 +15,7 @@ Ez a webalkalmazás segít kiszámolni, hogy n darab 2x8-as LEGO elemet hányfé
 ## Használat
 
 1. Nyisd meg a `index.php` fájlt egy PHP webszerveren
-2. Add meg a LEGO elemek számát (1-20 között)
+2. Add meg a LEGO elemek számát 
 3. Kattints a "Számítás" gombra
 4. A táblázat megjeleníti:
    - Az elemek számát (n)
@@ -28,7 +28,7 @@ A projekt a következő technológiákat használja:
 
 - **Backend**: PHP (számítási logika)
 - **Frontend**: HTML, CSS, JavaScript
-- **Dizájn**: Modern UI CSS animációkkal, reszponzív elrendezéssel
+- **Design**: Shadcn UI inspirált, CSS animációkkal, reszponzív elrendezéssel
 - **Animációk**: CSS keyframes és JavaScript DOM manipuláció
 
 ## Telepítés
