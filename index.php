@@ -64,8 +64,8 @@ if ($epitoelemekSzama > 0) {
         <div class="calculator-card">
             <div class="glow-effect"></div>
             <div class="content">
-                <h1 class="title">2x8 LEGO kombináció kalkulátor</h1>
-                <p class="description">A programom segít kiszámolni, hogy <i>n</i> darab 2x8-as LEGO elemet hányféleképpen lehet egymásra helyezni.</p>
+                <h1 class="title">2x4 LEGO kombináció kalkulátor</h1>
+                <p class="description">A programom segít kiszámolni, hogy <i>n</i> darab 2x4-as LEGO elemet hányféleképpen lehet egymásra helyezni.</p>
                 
                 <form method="POST" class="input-form" id="calculatorForm">
                     <div class="form-group">
