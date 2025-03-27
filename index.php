@@ -48,7 +48,7 @@ if ($epitoelemekSzama > 0) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2x8 LEGO kombináció kalkulátor</title>
+    <title>2x4 LEGO kombináció kalkulátor</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/background-blocks.css">
 </head>
